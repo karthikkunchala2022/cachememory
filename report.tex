@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\title{Lab 6 Report}
+\author{Karthik}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+The goal of this project is to simulate a cache memory system based on the given specifications and trace file. The cache simulation is implemented in C, and the report outlines the approach taken to solve the problem.
+
+\section{Problem Description}
+This programme involves reading configuration parameters from a file (\texttt{instruct.txt}) and simulating a cache memory system based on the provided trace file (\texttt{trace.txt}). The configuration parameters include cache size, block size, associativity, replacement policy, and write policy.
+
+\section{Approach}
+
+\subsection{Reading Configuration Parameters}
+\begin{enumerate}
+    \item Opened the configuration file (\texttt{instruct.txt}) and read the relevant parameters such as cache size, block size, associativity, replacement policy, and write policy.
+    \item Parsed the configuration lines to extract integer values and determine cache characteristics.
+\end{enumerate}
+
+\subsection{Parsing Trace File}
+\begin{enumerate}
+    \item Opened the trace file (\texttt{trace.txt}) and read each line to extract information about read or write operations and memory addresses.
+    \item Converted hexadecimal memory addresses to binary form and extracted set indices and tags based on the cache configuration.
+\end{enumerate}
+
+\subsection{Cache Simulation}
+\begin{enumerate}
+    \item Implemented a cache array to represent the simulated cache memory.
+    \item Utilized the specified replacement policy (FIFO, LRU, or RANDOM) and write policy (Write-Back or Write-Through) to update the cache based on the trace file operations.
+    \item Counted the number of cache hits and misses during the simulation.
+\end{enumerate}
+
+\subsection{Printing Results}
+\begin{enumerate}
+    \item Printed the simulation results, including memory addresses, set indices, tags, and whether each access resulted in a hit or miss.
+    \item Displayed the total number of cache hits and misses.
+\end{enumerate}
+
+\section{Results}
+I have implimented all the parts of problem statement mentioned....R W for FIFO,LRU and RANDOM;
+\section{Checking with Testcases}
+I have checked the code against test cases that are given in the problem statement and some others that i have attached below.
+\section{Conclusion}
+This report summarizes the approach taken to simulate a cache memory system based on the given configuration and trace files. The implemented C program successfully simulates cache behavior and provides insights into cache hits and misses. The project demonstrates effective file handling, data parsing, and cache simulation techniques.
+
+\end{document}
